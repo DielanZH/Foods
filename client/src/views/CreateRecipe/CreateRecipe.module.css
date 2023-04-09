@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background: #FFEFBA;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #FFEFBA);
+    background: linear-gradient(to left, #FFFFFF, #FFEFBA);
+    padding: 2%;
+}
+
+.container .title {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    outline: none;
+}
+
+.container .title:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.dietsTypes {
+    width: 100px;
+    border: none;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #d7d7d789;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form input,
+form textarea {
+    display: block;
+    padding: 10px 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-align: center;
+    list-style: none;
+}
+
+
+.container .summary input {
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container .submitButton button {
+    height: 50px;
+    width: 120px;
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-left: 5px;
+    font-weight: 600;
+    line-height: 1.5;
+    box-sizing: border-box;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 16px;
+    border-radius: 40px;
+    border: 4px solid #ffd429;
+    background-color: #ffd52d;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.container .submitButton button:hover {
+    padding-top: 1px;
+    cursor: pointer;
+    transform: scale(1.01);
+    filter: brightness(1.02);
+}

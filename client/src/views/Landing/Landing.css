@@ -1,0 +1,43 @@
+.landingImg {
+    display: grid;
+    place-content: center;
+    background-size: cover;
+    background-color: #020202;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.showLanding {
+    display: block;
+}
+
+.hideLanding {
+    display: none;
+}
+
+.Landing-btn {
+    position: relative;
+    width: fit-content;
+    
+}
+
+.landingImg .startButton button:hover {
+    cursor: pointer;
+}
+.landingImg .startButton button {
+    border: none;
+    width: fit-content;
+    background-color: transparent;
+    color: rgb(240, 243, 243);
+    font-size: 50px;
+    font-family: 'ArcadeClassic', sans-serif;
+    margin-top: 150px;
+}
+
+.landingImg img {
+    position: absolute;
+    height: 660px;
+    margin-left: 35%;
+
+}

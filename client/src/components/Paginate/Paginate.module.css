@@ -1,0 +1,31 @@
+
+.paginated{
+    margin: auto;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nro{
+    margin-right: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0.1px solid rgb(167, 166, 166);
+    color: rgb(34, 34, 34);
+    height: 25px;
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nro:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
