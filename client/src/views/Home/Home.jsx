@@ -37,6 +37,7 @@ export default function Home() {
     useEffect(() => {
         if (!allRecipes[0])
             dispatch(getRecipes())
+        //eslint-disable-next-line
     }, [dispatch])
 
 

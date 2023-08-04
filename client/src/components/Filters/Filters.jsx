@@ -31,6 +31,7 @@ export default function Filters() {
     useEffect(() => {
         if (!allDiets[0])
             dispatch(getDiets())
+        //eslint-disable-next-line
     }, [dispatch])
 
     return (

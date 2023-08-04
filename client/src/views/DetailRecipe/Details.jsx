@@ -18,6 +18,7 @@ export default function Details() {
         return () => {
             dispatch(getClean())
         }
+        //eslint-disable-next-line
     }, [dispatch])
 
     return (

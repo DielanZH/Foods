@@ -11,7 +11,7 @@ export default function Paginated({ recipesForPage, allRecipes, actualPage }) {
             <ul className={styles.paginated}>
                 {numPage && numPage.map(number => (
                     <li className={styles.nro} key={number}>
-                        <a onClick={() => actualPage(number)}>{number}</a>
+                        <button onClick={() => actualPage(number)}>{number}</button>
                     </li>
                 ))}
             </ul>

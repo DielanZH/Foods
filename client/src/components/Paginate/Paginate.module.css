@@ -10,7 +10,11 @@
     align-items: center;
 }
 
-.nro{
+.nro {
+    list-style: none;
+}
+
+.nro button{
     margin-right: 15px;
     border-radius: 10px;
     cursor: pointer;
@@ -25,7 +29,7 @@
     justify-content: center;
 }
 
-.nro:hover{
+.nro button:hover{
     cursor: pointer;
     transform: scale(1.05);
 }
