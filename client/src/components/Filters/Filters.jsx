@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterBy, filterDiets, getDiets, orderBy } from "../../redux/actions";
 import styles from './Filters.module.css';
@@ -36,7 +36,7 @@ export default function Filters() {
     return (
         <div className={styles.container}>
             <select className={styles.filterOrder} onChange={e => { handleName(e) }}>
-                <option value='todos'>Ordenar ⇅</option>
+                <option value='All'>Ordenar ⇅</option>
                 <option value='A-Z'>A - Z</option>
                 <option value='Z-A'>Z - A</option>
                 <option value='asc'>HealthScore ↑</option>
@@ -45,12 +45,7 @@ export default function Filters() {
 
             <select className={styles.filterDiets} onChange={e => handleFilterDiet(e)}>
                 <option value='All'>Todos</option>
-                {allDiets.reduce((acc, el) => {
-                    if (!acc.includes(el)) {
-                        acc.push(el);
-                    }
-                    return acc;
-                }, []).map(el => {
+                {allDiets && allDiets.map(el => {
                     return (<option value={el.name} key={el.id}> {el.name}</option>)
                 })
                 }

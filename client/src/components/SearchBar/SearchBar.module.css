@@ -63,4 +63,5 @@
 
 .SearchBar .button:focus {
     width: 50px;
+    border-radius: 0 40px 40px 0;
 }

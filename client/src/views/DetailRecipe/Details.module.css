@@ -35,6 +35,11 @@
     text-decoration: none;
 }
 
+.blockOne img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
 .blockTwo {
     width: 550px;
     height: 90%;
@@ -48,4 +53,32 @@
     line-height: 1.2;
     outline: none;
     text-decoration: none;
+}
+
+.backBtn {
+    height: 50px;
+    width: 120px;
+    margin: 10px;
+    margin-left: 30px;
+    padding-top: 5px;
+    padding-left: 9px;
+    font-weight: 600;
+    box-sizing: border-box;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-size: 16px;
+    border-radius: 40px;
+    border: 4px solid #ffd429;
+    background-color: #ffd52d;
+    transition: .1s;
+}
+
+.backBtn:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: brightness(1.02);
+    border-color: #ffd52d;
+    box-shadow: 0 0 5px #ffd429;
 }

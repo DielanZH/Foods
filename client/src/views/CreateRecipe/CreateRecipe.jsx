@@ -74,51 +74,54 @@ export default function CreateRecipe() {
                 </Link>
                 <h2>CREA TU RECETA</h2>
             </div>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <div>
+            <form className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
+                <div className={styles.blockOneCreate}>
                     <label>Nombre:</label>
                     <input type='text' name='name' placeholder="Nombre de tu receta" value={input.name} onChange={(e) => handleChange(e)} style={{ width: '300px', fontSize: '15px', textAlign: 'center' }} />
-                </div>
 
-                <div className={styles.image}>
-                    <label>Imagen:</label>
-                    <input type="url" value={input.image} name="image" placeholder='Ingresá el URL de una imagen...' onChange={(e) => handleChange(e)} style={{ width: '300px', fontSize: '15px', textAlign: 'center' }} />
-                </div>
 
-                <div className={styles.healthScore}>
-                    <label>Nivel de salubridad</label>
-                    <input type='range' name='healthScore' onChange={(e) => handleChange(e)} min='1' max='100' />
-                </div>
+                    <div className={styles.image}>
+                        <label>Imagen:</label>
+                        <input type="url" value={input.image} name="image" placeholder='Ingresá el URL de una imagen...' onChange={(e) => handleChange(e)} style={{ width: '300px', fontSize: '15px', textAlign: 'center' }} />
+                    </div>
 
-                <br />
-
-                <div className={styles.summary}>
-                    <label>Resumen del plato:</label>
-                    <input type='text' name='summary' cols="30" rows="10" onChange={handleChange} style={{ width: '300px', height: '100px', fontSize: '15px', textAlign: 'left' }} />
+                    <div className={styles.healthScore}>
+                        <label>Nivel de salubridad</label>
+                        <input type='range' name='healthScore' onChange={(e) => handleChange(e)} min='1' max='100' />
+                    </div>
                 </div>
 
                 <br />
 
-                <div className={styles.steps}>
-                    <label>Paso a paso:</label>
-                    <input type="text" name="steps" onChange={handleChange} style={{ width: '300px', height: '150px', fontSize: '15px' }} min="20" max="500" />
-                </div>
+                <div className={styles.blockTwoCreate}>
+                    <div className={styles.summary}>
+                        <label>Resumen del plato:</label>
+                        <input type='text' name='summary' cols="30" rows="10" onChange={handleChange} style={{ width: '300px', height: '100px', fontSize: '15px', textAlign: 'left' }} />
+                    </div>
 
-                <div className={styles.dietsTypes} id='diets'>
-                    {diets && diets.map(el => {
-                        return (
-                            <div className={el.name} key={el.id}>
-                                <input name={el} type='checkbox' value={el.name} key={el.id} onChange={(e) => handleChange(e)}></input>
-                                <label name={el.name}>{el.name}</label>
-                            </div>
-                        )
-                    })}
+                    <br />
+
+                    <div className={styles.steps}>
+                        <label>Paso a paso:</label>
+                        <input type="text" name="steps" onChange={handleChange} style={{ width: '300px', height: '150px', fontSize: '15px' }} min="20" max="500" />
+                    </div>
+
+                    <div className={styles.dietsTypes} id='diets'>
+                        {diets && diets.map(el => {
+                            return (
+                                <div className={el.name} key={el.id}>
+                                    <input name={el} type='checkbox' value={el.name} key={el.id} onChange={(e) => handleChange(e)}></input>
+                                    <label name={el.name}>{el.name}</label>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
-            </form>
+            </form >
             <div className={styles.submitButton}>
                 <button type="submit" onClick={(e) => handleSubmit(e)}>CREAR</button>
             </div>
-        </div>
+        </div >
     )
 }
 

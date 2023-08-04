@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom"
 import { getClean, getRecipeDetails } from "../../redux/actions";
-import styles from "./DetailRecipe.module.css"
+import styles from "./Details.module.css"
 
 export default function Details() {
 
@@ -11,6 +11,7 @@ export default function Details() {
     const { id } = useParams()
 
     const myRecipe = useSelector(state => state.detail)
+    console.log(myRecipe)
 
     useEffect(() => {
         dispatch(getRecipeDetails(id))
@@ -31,7 +32,7 @@ export default function Details() {
                 <h2>Health Score: {myRecipe.healthScore}</h2>
 
                 <h2>Tipo de dietas:</h2>
-                <h3> {myRecipe.diets && myRecipe.diets.map(el => el + ', ')} </h3>
+                <h3> {myRecipe.diets && myRecipe.diets.map(el => el?.name ? el?.name + ', ' : el + ', ')} </h3>
 
             </div>
 

@@ -1,0 +1,48 @@
+.landingImg {
+    display: flex;
+    place-content: center;
+    background-size: cover;
+    background-color: #222020;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.landingText h1 {
+    position: relative;
+    margin-top: 230px;
+    color: white;
+    border-color:#ffd52d;
+    text-shadow: 5px 3px 2px #222020;
+
+}
+
+.landingBtn {
+    position: relative;
+}
+
+.landingImg .landingBtn button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    filter: brightness(1.02);
+}
+
+.landingImg .landingBtn button {
+    height: 50px;
+    width: 190px;
+    border: none;
+    background-color: transparent;
+    color: #222020;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 100px;
+    border-radius: 40px;
+    border: 4px solid #ffd429;
+    background-color: #ffd52d;
+    transition: .1s;
+}
+
+.landingImg img {
+    position: absolute;
+    background-size: cover;
+}

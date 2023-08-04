@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../../IMAGES/landing.jpg';
+import image from '../../IMAGES/FONDO_PI_1.jpg';
+import styles from './Landing.module.css'
 
 export default function Landing() {
 
-    const [mostrar, setMostrar] = useState(false)
-
-    const loading = () => {
-        setMostrar(!mostrar);
-    }
     return (
-        <div className="landingImg">
-            <img onLoad={loading} src={image} className={`${mostrar ? "showLanding" : "hideLanding"}`} alt="" />
-            <div className="landingText">
-                <h1>HENRY FOOD</h1>
-                <Link to={'/home'} className={'Landing-btn'}>
+        <div className={styles.landingImg}>
+            <img src={image} alt="" />
+            <div className={styles.landingText}>
+                <h1>#HenryFood</h1>
+                <Link to={'/home'} className={styles.landingBtn}>
                     <button>BON APETIT</button>
                 </Link>
             </div>
